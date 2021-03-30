@@ -1,0 +1,28 @@
+{
+  "name": "poiversion1",
+  "version": "1.0.0",
+  "description": "PLACES OF INTEREST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red28mil/POIversion1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/red28mil/POIversion1/issues"
+  },
+  "homepage": "https://github.com/red28mil/POIversion1#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}
