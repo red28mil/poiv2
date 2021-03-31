@@ -4,7 +4,7 @@ const Hapi = require("@hapi/hapi");
 const Inert = require("@hapi/inert");
 
 const server = Hapi.server({
-  port: 8000,
+  port: 5020,
   host: "localhost",
 });
 
