@@ -18,7 +18,8 @@
   "homepage": "https://github.com/red28mil/POIversion1#readme",
   "dependencies": {
     "@hapi/hapi": "^20.1.2",
-    "@hapi/inert": "^6.0.3"
+    "@hapi/inert": "^6.0.3",
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
