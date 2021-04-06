@@ -1,0 +1,57 @@
+{
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Tom",
+      "lastName": "Browne",
+      "email": "Tom@live.com",
+      "password": "Tom"
+    },
+    "marge": {
+      "firstName": "Anne",
+      "lastName": "Lowe",
+      "email": "annelowe@gmail.com",
+      "password": "Anne"
+    },
+    "bart": {
+      "firstName": "Barry",
+      "lastName": "deevy",
+      "email": "barry@deevy.com",
+      "password": "Barry"
+    }
+  },
+  "candidates": {
+    "_model": "Candidate",
+    "lisa": {
+      "firstName": "Anne",
+      "lastName": "Lowe",
+      "office": "chairman"
+    },
+    "donald": {
+      "firstName": "dave",
+      "lastName": "doyle",
+      "office": "secretary"
+    }
+  },
+  "donations": {
+    "_model": "Donation",
+    "one": {
+      "amount": 40,
+      "method": "paypal",
+      "donor": "->users.barry",
+      "candidate": "->candidates.anne"
+    },
+    "two": {
+      "amount": 90,
+      "method": "direct",
+      "donor": "->users.mary",
+      "candidate": "->candidates.anne"
+    },
+    "three": {
+      "amount": 430,
+      "method": "paypal",
+      "donor": "->users.tom",
+      "candidate": "->candidates.dave"
+    }
+  }
+}

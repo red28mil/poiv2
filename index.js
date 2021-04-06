@@ -2,6 +2,7 @@
 
 const Hapi = require("@hapi/hapi");
 const Inert = require("@hapi/inert");
+require("./app/models/db");
 
 const server = Hapi.server({
   port: 5020,
