@@ -3,7 +3,7 @@
 const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 
-const donationSchema = new Schema({
+const beachSchema = new Schema({
   amount: Number,
   method: String,
   donor: {
@@ -16,4 +16,4 @@ const donationSchema = new Schema({
   },
 });
 
-module.exports = Mongoose.model("Donation", donationSchema);
+module.exports = Mongoose.model("Beach", beachSchema);
