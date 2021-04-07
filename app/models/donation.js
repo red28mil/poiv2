@@ -16,4 +16,4 @@ const beachSchema = new Schema({
   },
 });
 
-module.exports = Mongoose.model("Beach", beachSchema);
+module.exports = Mongoose.model("Donation", beachSchema);
