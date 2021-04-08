@@ -21,7 +21,7 @@
     }
   },
   "candidates": {
-    "_model": "Beach",
+    "_model": "Candidate",
     "anne": {
       "firstName": "Anne",
       "lastName": "Lowe",
