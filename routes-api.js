@@ -1,3 +1,5 @@
+//added candidates for donations from lab work
+
 const Candidates = require("./app/api/candidates");
 
 module.exports = [

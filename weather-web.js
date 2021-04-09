@@ -1,3 +1,6 @@
+//I have tried to get this to work from here followed all instruction but i couldnt get fetch to work,
+// so my api key is in my HTML page and open to the public.
+
 const axios = require("axios");
 const apiKey = "9f3d04327d2714f90779faa7428fbb46";
 
