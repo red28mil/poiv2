@@ -1,3 +1,5 @@
+// sets up the user schema for mongodb using mongoose to display the information
+
 "use strict";
 
 const Mongoose = require("mongoose");

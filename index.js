@@ -1,4 +1,8 @@
 "use strict";
+const os = require("os"); //
+os.tmpDir = os.tmpdir; //
+const Bell = require("@hapi/bell"); //
+const AuthCookie = require("@hapi/cookie"); //
 
 const Hapi = require("@hapi/hapi");
 const Inert = require("@hapi/inert");
@@ -25,6 +29,7 @@ async function init() {
   await server.register(Inert);
   await server.register(Vision);
   await server.register(Cookie);
+  await server.register([Bell, AuthCookie]);
   server.validator(require("@hapi/joi"));
   server.views({
     engines: {
@@ -37,11 +42,15 @@ async function init() {
     layout: true,
     isCached: false,
   });
-  server.auth.strategy("session", "cookie", {
+  server.auth.strategy("cookie-auth", "cookie", {
     cookie: {
-      name: process.env.cookie_name,
-      password: process.env.cookie_password,
-      isSecure: false,
+      name: "demo_auth", // Name of auth cookie to be set
+      password: "password-should-be-32-characters", // String used to encrypt cookie
+      isSecure: false, // Should be 'true' i
+
+      // name: process.env.cookie_name, session
+      // password: process.env.cookie_password,
+      //isSecure: false,
     },
     redirectTo: "/",
   });

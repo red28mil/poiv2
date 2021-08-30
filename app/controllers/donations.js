@@ -1,3 +1,5 @@
+//this handles users donations and the report output and also uses joi to validate.
+
 "use strict";
 const Donation = require("../models/donation");
 const User = require("../models/user");
@@ -8,7 +10,7 @@ const Donations = {
   home: {
     handler: async function (request, h) {
       const candidates = await Candidate.find().lean();
-      return h.view("home", { title: "Make a Donation", candidates: candidates });
+      return h.view("home", { title: "donate", candidates: candidates });
     },
   },
   report: {

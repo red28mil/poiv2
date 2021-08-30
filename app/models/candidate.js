@@ -1,3 +1,4 @@
+// adds candidate to the mongodb using mongoose
 "use strict";
 
 const Mongoose = require("mongoose");

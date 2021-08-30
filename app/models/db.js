@@ -1,3 +1,4 @@
+// this connects the mongodb database using mongoose with error log and also when its connected correctly its displayed in the console.
 "use strict";
 
 const env = require("dotenv");
@@ -7,7 +8,8 @@ const Mongoose = require("mongoose");
 
 Mongoose.set("useNewUrlParser", true);
 Mongoose.set("useUnifiedTopology", true);
-
+//("mongodb+srv://<r>:<5wm0UAYkTh5268MP>@sandbox.osg3k.mongodb.net/poi?retryWrites=true&w=majority/poi");
+//mongodb+srv://<r>:<5wm0UAYkTh5268MP>@sandbox.osg3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 Mongoose.connect(process.env.db);
 const db = Mongoose.connection;
 
@@ -33,25 +35,3 @@ db.once("open", function () {
   console.log(`database connected to ${this.name} on ${this.host}`);
   seed();
 });
-//"use strict";
-
-//require("dotenv").config();
-
-//const Mongoose = require("mongoose");
-
-//Mongoose.set("useNewUrlParser", true);
-//Mongoose.set("useUnifiedTopology", true);
-
-//Mongoose.connect(process.env.db).then((r) => console.log);
-//const db = Mongoose.connection;
-
-//db.on("error", function (err) {
-//  console.log("database connection error: ${err}");
-//});
-
-//db.on("disconnected", function () {
-//  console.log("database disconnected");
-//});
-//db.once("open", function () {
-//  console.log("database connected to ${this.name} on ${this.host}");
-//});

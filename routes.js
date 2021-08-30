@@ -12,12 +12,21 @@ module.exports = [
   { method: "POST", path: "/login", config: Accounts.login },
   { method: "GET", path: "/settings", config: Accounts.showSettings },
   { method: "POST", path: "/settings", config: Accounts.updateSettings },
-  //{ method: "GET", path: "/delete", config: Accounts.delete },
+  //{ method: "POST", path: "/delete", config: Accounts.delete },
 
   { method: "GET", path: "/home", config: Donations.home },
   { method: "POST", path: "/donate", config: Donations.donate },
   { method: "GET", path: "/report", config: Donations.report },
-
+  {
+    method: "POST",
+    path: "/{param*}",
+    handler: {
+      directory: {
+        path: "./public",
+      },
+    },
+    options: { auth: false },
+  },
   {
     method: "GET",
     path: "/{param*}",
