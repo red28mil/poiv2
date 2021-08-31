@@ -10,14 +10,13 @@ const AuthCookie = require("@hapi/cookie");
 const main = async () => {
   const server = Hapi.server({ port: 5010 });
 
-  // Register bell and hapi auth cookie with the server
   await server.register([Bell, AuthCookie]);
 
   server.auth.strategy("cookie-auth", "cookie", {
     cookie: {
-      name: "demo_auth", // Name of auth cookie to be set
+      name: "demo_auth",
       password: "password-should-be-32-characters", // String used to encrypt cookie
-      isSecure: false, // Should be 'true' in production software (requires HTTPS)
+      isSecure: false, // (requires HTTPS)
     },
     redirectTo: "/",
   });
@@ -26,8 +25,7 @@ const main = async () => {
     provider: "github",
     password: "github-encryption-password-secure", // String used to encrypt cookie
     // used during authorisation steps only
-    clientId: "ENTER CLIENT ID", // *** Replace with your app Client Id ****
-    clientSecret: "ENTER CLIENT SECRET", // *** Replace with your app Client Secret ***
+    clientId: "f0df5679a6274e2378ff",
     isSecure: false, // Should be 'true' in production software (requires HTTPS)
   };
 

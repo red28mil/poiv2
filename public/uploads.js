@@ -36,10 +36,8 @@ function checkFileType(file, cb) {
   }
 }
 
-// Init app
 const app = express();
 
-// EJS
 app.set("view engine", "ejs");
 
 // Public Folder
